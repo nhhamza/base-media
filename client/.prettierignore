@@ -1,0 +1,15 @@
+# Dependencies
+/node_modules
+
+# Testing
+/coverage
+
+# Folders
+/build
+/src/styles
+
+# Files
+react-app-env.js
+serviceWorker.js
+jest.config.js
+README.md

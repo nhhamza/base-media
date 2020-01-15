@@ -1,0 +1,21 @@
+{
+  "cardId": "67111977",
+  "personTag": "11091968",
+  "firstName": "Jaehaerys",
+  "lastName": "Targaryen",
+  "hauler": null,
+  "address": "The Wall",
+  "phone": "+12 123 45 67 89",
+  "email": "JaehaerysTargaryen@familymurderer.com",
+  "countryId": null,
+  "cityId": null,
+  "zipCode": null,
+  "languageId": null,
+  "setUpTrackNumber": null,
+  "setUpTrailerNumber": null,
+  "inVisit": null,
+  "personalPhoto": null,
+  "driverLicenceCopy": null,
+  "idCopy": null,
+  "type": "inspector"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "base-media",
+  "version": "0.1.0",
+  "description": "Local Server for mocking end-point calls",
+  "keywords": [
+    "node",
+    "npm",
+    "express",
+    "local server",
+    "mock server",
+    "concurrently",
+    "nodemon"
+  ],
+  "license": "UNLICENSED",
+  "engines": {
+    "node": "12.10.0",
+    "npm": "6.10.3"
+  },
+  "scripts": {
+    "client:local": "cd client && yarn start:local",
+    "client:dev": "cd client && yarn start:dev",
+    "client:prod": "cd client && yarn build && serve -s build",
+    "build": "cd client && yarn build",
+    "local": "REACT_APP_ENV=local concurrently --kill-others-on-fail 'yarn server' 'yarn client:local'",
+    "dev": "REACT_APP_ENV=dev concurrently --kill-others-on-fail 'yarn server' 'yarn client:dev'",
+    "prod": "REACT_APP_ENV=prod concurrently --kill-others-on-fail 'yarn server' 'yarn client:prod'",
+    "server": "nodemon server.js",
+    "start": "node server.js",
+    "deploy-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
+    "test-client": "cd client && yarn test --watchAll"
+  },
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "compression": "1.7.4",
+    "cors": "2.8.5",
+    "dotenv": "8.1.0",
+    "express": "4.17.1",
+    "express-sslify": "1.2.0",
+    "node": "^12.10.0",
+    "nodemon": "1.19.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.21",
+    "concurrently": "4.0.1"
+  }
+}
