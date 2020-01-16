@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 //import { createStructuredSelector } from 'reselect';
 
 import InfoComponent from '../../components/info/info.component';
-import { HelpPageContainer } from './help.styles';
 
 //import { connect } from 'react-redux';
 //import { selectCallCenterList } from '../../redux/call-center/call-center.selectors';
@@ -19,9 +18,7 @@ const HelpPage = ({ getCallCenter, callCenter, currentUser }) => {
   };
 
   return (
-    <HelpPageContainer>
       <InfoComponent {...infoHelp} />
-    </HelpPageContainer>
   );
 };
 
