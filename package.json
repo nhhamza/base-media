@@ -1,7 +1,7 @@
 {
   "name": "base-media",
   "version": "0.1.0",
-  "description": "Local Server for mocking end-point calls",
+  "description": "base-media",
   "keywords": [
     "node",
     "npm",

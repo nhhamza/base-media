@@ -1,7 +1,7 @@
 {
   "name": "abb-terminal-insight",
   "version": "0.1.0",
-  "description": "Application for managing driver's information, trucks load/unload status and geolocation.",
+  "description": "base-media.",
   "keywords": [
     "axios",
     "react",
