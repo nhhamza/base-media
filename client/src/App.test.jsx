@@ -9,8 +9,6 @@ import { mount } from 'enzyme';
 
 const mockStore = configureStore([]);
 
-jest.mock('react-qr-reader');
-
 describe('App component', () => {
   const generateElement = (store, route) => {
     return mount(

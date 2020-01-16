@@ -9,26 +9,13 @@ import * as serviceWorker from './serviceWorker';
 import './index.scss';
 import App from './App';
 
-const isLocalMode = process.env.REACT_APP_ENV === 'local';
-
-if (isLocalMode) {
-  ReactDOM.render(
-    <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Provider>,
-    document.getElementById('root')
-  );
-} else {
-  ReactDOM.render(
-    <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Provider>,
-    document.getElementById('root')
-  );
-}
+ReactDOM.render(
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
+  document.getElementById('root')
+);
 
 serviceWorker.register();

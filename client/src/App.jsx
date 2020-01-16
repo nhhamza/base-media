@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { Switch, Route, withRouter } from 'react-router';
+import { Switch, Route } from 'react-router';
 
 import Header from './components/header/header.component';
 import Spinner from './components/spinner/spinner.component';
@@ -15,11 +15,11 @@ export const App = () => {
       <Header />
       <Suspense fallback={<Spinner />}>
         <Switch>
-          <Route path="/" component={HelpPage} key="help" />
+          <Route exact path="/" component={HelpPage} key="help" />
         </Switch>
       </Suspense>
     </div>
   );
 };
 
-export default withRouter(App);
+export default App;

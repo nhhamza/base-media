@@ -14,7 +14,6 @@
     "scss",
     "sass",
     "scss/sass",
-    "styled-components",
     "prettier",
     "stylelint",
     "husky",
@@ -34,7 +33,6 @@
     "@types/react-router-dom": "^5.1.0",
     "@types/redux-logger": "^3.0.7",
     "@types/redux-saga": "^0.10.5",
-    "@types/styled-components": "^4.1.20",
     "axios": "^0.19.0",
     "classnames": "^2.2.6",
     "d3": "^5.12.0",
@@ -54,8 +52,7 @@
     "redux": "^4.0.4",
     "redux-logger": "^3.0.6",
     "redux-saga": "^1.1.1",
-    "reselect": "^4.0.0",
-    "styled-components": "^4.4.0"
+    "reselect": "^4.0.0"
   },
   "scripts": {
     "start:local": "react-scripts start",
@@ -64,7 +61,7 @@
     "test": "yarn code:lint && yarn stylelint:fix && cross-env CI=true react-scripts test --env=jsdom --colors --coverage",
     "code:lint": "prettier --c \"src/**/*.*(js|ts|tsx)\" --write",
     "stylelint:check": "stylelint '**/*.scss' --config './.stylelintrc' --config-basedir './src' --syntax 'scss' --formatter 'verbose'",
-    "stylelint:fix": "stylelint '**/*.scss' --config './.stylelintrc' --config-basedir './src' --syntax 'scss' --fix --formatter 'verbose'",
+    "stylelint:fix": "stylelint \"**/*.scss\" --config \"./.stylelintrc\" --config-basedir \"./src\" --syntax \"scss\" --fix --formatter \"verbose\"",
     "eject": "react-scripts eject"
   },
   "husky": {
@@ -75,19 +72,24 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.{ts,tsx}",
+      "src/**/*.{js,jsx}",
+      "!src/redux/call-center/**/*",
       "!<rootDir>/node_modules/",
-      "!src/serviceWorker.ts",
-      "!src/react-app-env.d.ts",
-      "!src/index.tsx",
-      "!src/api/api.conf.tsx",
-      "!src/redux/root-reducer.ts",
-      "!src/redux/store.ts",
-      "!src/**/*.styles.ts",
+      "!src/serviceWorker.js",
+      "!src/react-app-env.d.js",
+      "!src/index.jsx",
+      "!src/api/api.conf.jsx",
+      "!src/redux/root-reducer.js",
+      "!src/redux/store.js",
+      "!src/**/*.styles.js",
       "!src/theme/**/*",
-      "!src/redux/root-saga.ts",
-      "!src/redux/saga-testing.utils.ts",
-      "!src/shared/models/**/*"
+      "!src/redux/root-saga.js",
+      "!src/redux/saga-testing.utils.js",
+      "!src/shared/models/**/*",
+      "!src/shared/fixtures/**/*",
+      "!src/utils/**/*",
+      "!src/redux/call-center/**/*",
+      "!src/api/interceptors.jsx"
     ]
   },
   "browserslist": {

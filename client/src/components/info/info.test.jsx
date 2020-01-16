@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { shallow } from 'enzyme';
 
 import InfoComponent from './info.component';
 
@@ -20,12 +20,12 @@ describe('Info Component', () => {
   });
 
   it('the title should be "YOU NEED HELP?"', () => {
-    const title = wrapper.find('TitlePageInfo').text();
+    const title = wrapper.find('.information__title').text();
     expect(title).toEqual(infoHelp.title);
   });
 
   it('the description should be "Description of Help"', () => {
-    const description = wrapper.find('p').text();
+    const description = wrapper.find('.information__description').text();
     expect(description).toEqual(infoHelp.description);
   });
 });
