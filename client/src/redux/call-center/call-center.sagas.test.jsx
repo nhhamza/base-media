@@ -29,13 +29,13 @@ describe('on call center start saga', () => {
 describe('on call center saga', () => {
   const generator = callCenter(PERSON_TAG_OBJECT);
   //todo amartinez deuda tecnica.
-  xit('should call getCallCenterSuccess', () => {
+  /*xit('should call getCallCenterSuccess', () => {
     generator.next();
     expect(generator.next().value).toEqual(
       put(getCallCenterSuccess(callCenterResponseBuilder()))
     );
   });
-
+*/
   it('should call getCallCenterFailure on error', () => {
     const newGenerator = callCenter(PERSON_TAG_OBJECT);
     newGenerator.next();

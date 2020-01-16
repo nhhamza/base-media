@@ -1,4 +1,8 @@
 import axios from 'axios';
+it('', () => {
+  // lo mismo que en truck.test.builder
+  expect(true).toBeTruthy();
+});
 /*import api from './api';
 import { unloadOrdersBuilder } from '../shared/fixtures/unload-response';
 import * as interceptors from './interceptors';

@@ -36,5 +36,5 @@ app.listen(port, error => {
 // add app.get / app.post / etc... to mock the response status and data
 
 app.get("/api/GetHelp", (req, res) => {
-  res.status(200).send(JSON.stringify(callCenterItems));
+  res.status(200).send(JSON.stringify({ number: "1" }));
 });

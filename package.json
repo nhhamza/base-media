@@ -21,7 +21,7 @@
     "client:dev": "cd client && yarn start:dev",
     "client:prod": "cd client && yarn build && serve -s build",
     "build": "cd client && yarn build",
-    "local": "cross-env REACT_APP_ENV=local concurrently --kill-others-on-fail \"yarn server\" \"'yarn client:local'\" ",
+    "local": "cross-env REACT_APP_ENV=local concurrently --kill-others-on-fail \"yarn server\" \"yarn client:local\" ",
     "dev": "REACT_APP_ENV=dev concurrently --kill-others-on-fail 'yarn server' 'yarn client:dev'",
     "prod": "REACT_APP_ENV=prod concurrently --kill-others-on-fail 'yarn server' 'yarn client:prod'",
     "server": "nodemon server.js",

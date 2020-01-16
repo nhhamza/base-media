@@ -1,12 +1,12 @@
 import React from 'react';
-import { PageInfoContainer, TitlePageInfo } from './info.styles';
+import './info.styles.scss';
 
 const Info = ({ title, description }) => {
   return (
-    <PageInfoContainer>
-      <TitlePageInfo>{title}</TitlePageInfo>
-      <p>{description}</p>
-    </PageInfoContainer>
+    <div className="information">
+      <h2 className="information__title">{title}</h2>
+      <p className="information__description">{description}</p>
+    </div>
   );
 };
 

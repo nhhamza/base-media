@@ -10,7 +10,7 @@ class API {
     this.http = axios;
   }
 
-  getHelp = personalTag => this.http.get(`GetHelp/${personalTag}`);
+  getHelp = () => this.http.get(`GetHelp`);
 }
 
 export default new API();
